@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A m a l r i</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/968b34c779.js" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1500px)" href="style_tablet.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="style_ipad.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="stylephone.css">
+
+</head>
+
+
+<body>
+	<div class="entete">
+		<img id="logo" src="logo.png">
+		<div>
+			<img id="agrandir" src="icon_agrandir.png" name="agrandir" onclick="afficher(this.name)">
+			<ul id="ulist">
+				<li><a class="menu" href="index.html">Home</a></li>
+				<li><a class="menu renew" href="#" onmouseover="afficher('products')" onmouseleave="cacher('products')">Products</a>
+					<ul id="products" onmouseover="afficher('products')" onmouseleave="cacher('products')">
+						<li><a class="menu element" href="">IPTV SERVER</a></li>
+						<li><a class="menu element" href="">APPLICATION</a></li>
+						<li><a class="menu element" href="">24H FREE TRIAL</a></li>
+					</ul>
+				</li>
+				<li><a class="menu renew" href="" onmouseover="afficher('renew')" onmouseleave="cacher('renew')">Renew</a>
+					<ul id="renew" onmouseover="afficher('renew')" onmouseleave="cacher('renew')">
+						<li><a class="menu element" href="">IPTV SERVER</a></li>
+						<li><a class="menu element" href="">APPLICATION</a></li>
+					</ul>
+				</li>
+				<li><a class="menu" href="assistance.html">Contact US</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="body">
+		<p id="window">Iptv server All modes of subscription</p>
+		
+			<div class="article">
+				<i class="fas fa-heart img-wish" id="wish" onclick="added(this)"><span id="title">Added to wishlist</span></i>
+				<img class="picture" src="iptv.png">
+				<p class="titre">Iptv server Activation 1year
+					<span class="prix">30<sup style="color: yellow">&euro;</sup></span>
+				</p>
+				<p class="description">compatible with all devices (Smart TV, Android Box, Smartphones, PC, Tablet...)</p>
+				<!--</div>-->
+				<a class="buy-link" href="buy.html">Add to card</a>
+
+			</div>
+			<div class="article">
+				<i class="fas fa-heart img-wish" id="wish" onclick="added(this)"><span id="title">Added to wishlist</span></i>
+				<img class="picture" src="iptv.png">
+				<p class="titre">Iptv server Activation 6months
+					<span class="prix">20<sup style="color: yellow">&euro;</sup></span>
+				</p>
+				<p class="description">compatible with all devices (Smart TV, Android Box, Smartphones, PC, Tablet...)</p>
+				<a class="buy-link" href="buy.html">Add to card</a>
+			</div>
+			<div class="article">
+				<i class="fas fa-heart img-wish" id="wish" onclick="added(this)"><span id="title">Added to wishlist</span></i>
+				<img class="picture" src="iptv.png">
+				<p class="titre">Iptv server Activation 3months
+					<span class="prix">15<sup style="color: yellow">&euro;</sup></span>
+				</p>
+				<p class="description">compatible with all devices (Smart TV, Android Box, Smartphones, PC, Tablet...)</p>
+				<a class="buy-link" href="buy.html">Add to card</a>
+			</div>
+			<div class="article">
+				<i class="fas fa-heart img-wish" id="wish" onclick="added(this)"><span id="title">Added to wishlist</span></i>
+				<img class="picture" src="iptv.png">
+				<p class="titre">Iptv server Activation 1month
+					<span class="prix">10<sup style="color: yellow">&euro;</sup></span>
+				</p>
+				<p class="description">compatible with all devices (Smart TV, Android Box, Smartphones, PC, Tablet...)</p>
+				<a class="buy-link" href="buy.html">Add to card</a>
+			</div>
+			<div class="article">
+				<i class="fas fa-heart img-wish" id="wish" onclick="added(this)"><span id="title">Added to wishlist</span></i>
+				<img class="picture" src="iptv.png">
+				<p class="titre">Iptv server FREE TRIAL 24h
+					<span class="prix">0<sup style="color: yellow">&euro;</sup></span>
+				</p>
+				<p class="description">compatible with all devices (Smart TV, Android Box, Smartphones, PC, Tablet...)</p>
+				<a class="buy-link" href="buy.html">Add to card</a>
+			</div>
+	</div>
+		<div id="bottom"><h3 id="copyright">Developped by sidi - copyright 2021</h3></div>
+
+		<script>
+			function afficher(ele){
+				if(ele =='agrandir'){
+					document.getElementById('ulist').style.display="block";
+					document.getElementById('agrandir').src="icon_reduire.png";
+					document.getElementById('agrandir').name="reduire";
+				} else if(ele =='reduire'){
+					document.getElementById('ulist').style.display="none";
+					document.getElementById('agrandir').src="icon_agrandir.png";
+					document.getElementById('agrandir').name="agrandir";
+				}
+				document.getElementById(ele).style.display="block";
+			}
+
+			function added(ele){
+				ele.style.color = "blue";
+				document.getElementById('title').style.display="inline-block";
+				setTimeout(cache,1500);  
+			}
+
+			function cacher(ele){
+				document.getElementById(ele).style.display="none";
+			}
+
+			function cache(){
+				document.getElementById('title').style.display="none";				
+			}
+		</script>
+	</body>
+	</html>
